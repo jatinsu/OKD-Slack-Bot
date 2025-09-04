@@ -1,0 +1,11 @@
+goose run --no-session -t "grab the latest release in the 4-scos-next for OKD. If it's accepted, write a green check mark. If it's failed, give me a red x and then tell me the jobs that have failed. The way to do this is to compare the names, they should largerly be the same except the number. The larger the number the newer the release. AFTER running all your functions, wrap a summary in a <slack> tag. This will be used for parsing the output, so BE SURE to do this. Bold whether or not the release has been rejected or accepted within the slack tag. This is an example of the output
+
+<slack>
+*OKD Release: <https://amd64.origin.releases.ci.openshift.org/releasetag/4.20.0-okd-scos.ec.0|4.20.0-okd-scos.ec.0>*
+*✅ Accepted*/**❌ Rejected**
+
+The following job has failed (only have this if the release is rejected):
+
+</slack>
+
+";
