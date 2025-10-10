@@ -51,13 +51,16 @@ def run_goose():
 
 def run_goose_with_prompt(prompt: str):
     print("running goose with custom prompt")
+    with open("custom-prompt.txt", "r") as f:
+        prompt_instructions = f.read()
     try:
         result = subprocess.run([
             "goose",
             "run",
+            "--system", prompt_instructions,
             "--no-session",
             "-t",
-            prompt + "\n\n" + "After running all your functions, wrap a summary in a <slack> tag. Do this even when there is a failed output. This will be used for parsing the output, so BE SURE to do this. "
+            prompt
         ], capture_output=True, text=True)
         if result.stdout:
             with open("output/goose-prompt-output.txt", "w") as f:
