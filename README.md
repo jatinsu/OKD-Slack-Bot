@@ -4,7 +4,7 @@
 2. go to [your slack api dashboard](https://api.slack.com/apps) to grab your
     1. SLACK_BOT_TOKEN
     2. SLACK_APP_TOKEN
-    3. SLACK_CHANNEL_ID (you can find this by right clicking the slack channel)
+    3. SLACK_CHANNEL_ID (you can find this by right clicking the slack channel, view channel detials, and scroll down)
 
     and put it in a file named `.env`
 3. create a enviorment through `python -m venv venv` and run `source venv/bin/activate`
